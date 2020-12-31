@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  # mysql 8.0.x
+  db:
+    image: mysql:8.0
+    ports:
+      - 13306:3306
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: "Pwd123!@"
+      MYSQL_USER: "guest"
+      MYSQL_PASS: "12345"
+    volumes:
+      - ~/mysql/mysql00:/var/lib/mysql
+      - ~/mysql/sql:/var/lib/sql
+
+  # admin管理后台
+  admin:
+    image: adminer:4.7-standalone
+    ports:
+      - 18080:8080
