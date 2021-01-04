@@ -11,8 +11,8 @@ services:
       MYSQL_USER: "guest"
       MYSQL_PASS: "12345"
     volumes:
-      - ~/mysql/mysql00:/var/lib/mysql
-      - ~/mysql/sql:/var/lib/sql
+      - ~/mysql8.0/mysql00:/var/lib/mysql
+      - ~/mysql8.0/sql:/var/lib/sql
 
   # admin管理后台
   admin:
