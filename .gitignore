@@ -31,4 +31,4 @@
 *.out
 *.app
 
-/datasets/dumps/*.dump
+/datasets/employees/dumps/*.dump
